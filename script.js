@@ -24,3 +24,27 @@ cat.makeSound();
 
 // const dog = createAnimal("Dog", "Woof");
 // dog();
+
+class Person {
+  constructor(name, age, isMaried) {
+    this.name = name;
+    this.age = age;
+    this.isMaried = isMaried;
+  }
+
+  speak() {
+    console.log(`My name is ${this.name}, i am ${this.age} years old`);
+  }
+
+  isMariedPerson() {
+    if (this.age > 20 && this.isMaried) {
+      console.log(`${this.name} is maried`);
+    } else {
+      console.log(`${this.name} is not maried`);
+    }
+  }
+}
+
+const person = new Person("John", 20, true);
+person.speak();
+person.isMariedPerson();
