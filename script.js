@@ -48,3 +48,23 @@ class Person {
 const person = new Person("John", 20, true);
 person.speak();
 person.isMariedPerson();
+
+class BankAccount {
+  constructor(accountNumber, balance) {
+    this.accountNumber = accountNumber;
+    this._balance = balance; // Private property (_balance)
+  }
+
+  getBalance() {
+    return this._balance;
+  }
+
+  deposit(amount) {
+    this._balance += amount;
+  }
+}
+
+const myAccount = new BankAccount("123456789", 1000);
+console.log(myAccount.getBalance());
+myAccount.deposit(5000);
+console.log(myAccount.getBalance());
