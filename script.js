@@ -207,3 +207,37 @@ class BankAccountClass {
     return sum;
   }
 }
+
+//New Tasks 1
+class NewPerson {
+  constructor(name, age, country) {
+    this.name = name;
+    this.age = age;
+    this.country = country;
+  }
+
+  displayDetails() {
+    console.log(`Name: ${this.name}`);
+    console.log(`Age: ${this.age}`);
+    console.log(`Country: ${this.country}`);
+  }
+}
+
+const newPerson = new NewPerson("John", "20", "USA");
+newPerson.displayDetails();
+
+//
+class MyNumbers {
+  constructor(numbers) {
+    this.numbers = numbers;
+  }
+
+  displayNumber() {
+    for (let i = 0; i < this.numbers.length; i++) {
+      console.log(`Number: ${this.numbers[i]}`);
+    }
+  }
+}
+
+const myNumbers = new MyNumbers([1, 2, 3, 4, 5]);
+myNumbers.displayNumber();
