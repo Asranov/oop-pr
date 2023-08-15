@@ -268,3 +268,18 @@ class Ebook extends Book {
     console.log(`Price: ${this.price}`);
   }
 }
+
+class Coffee {
+  constructor(name, color, price) {
+    this.name = name;
+    this.color = color;
+    this.price = price;
+  }
+
+  makeCoffee() {
+    return `coffee ${this.name}, color ${this.color} and price is ${this.price}$`;
+  }
+}
+
+const Latte = new Coffee("dark", "black", 10);
+console.log(Latte.makeCoffee());
