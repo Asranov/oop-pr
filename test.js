@@ -78,3 +78,32 @@ class Manager extends Worker {
 class Developer extends Worker {
   // Разработчики работают и могут перерывать работу для еды
 }
+
+//private, protected, public
+class Example {
+  #privateField = "This is private";
+  publicField = "This is public";
+
+  getPrivateField() {
+    return this.#privateField;
+  }
+}
+
+const instance = new Example();
+console.log(instance.getPrivateField());
+console.log(instance.publicField);
+// console.log(instance.#privateField);
+
+class Parent {
+  protectedField = "This is protected";
+}
+
+class Child extends Parent {
+  showProtectedField() {
+    return this.protectedField;
+  }
+}
+
+const childInstance = new Child();
+console.log(childInstance.showProtectedField());
+console.log(childInstance.protectedField);
