@@ -150,7 +150,7 @@ class User {
 }
 
 // Пример, соблюдающий принцип SRP
-class User {
+class User2 {
   constructor(name) {
     this.name = name;
   }
