@@ -1,7 +1,7 @@
 //ООП Класс
 
 // Определение класса "Person"
-class Person {
+class Person1 {
   // Конструктор класса
   constructor(name, age) {
     this.name = name;
@@ -10,12 +10,12 @@ class Person {
 
   // Метод класса
   greet() {
-    console.log(`Привет, меня зовут ${this.name} и мне ${this.age} лет.`);
+    // console.log(`Привет, меня зовут ${this.name} и мне ${this.age} лет.`);
   }
 }
 
 // Создание объекта на основе класса "Person"
-const person1 = new Person("Анна", 25);
+const person1 = new Person1("Анна", 25);
 
 // Вызов метода объекта
 person1.greet(); // Выведет: "Привет, меня зовут Анна и мне 25 лет."
@@ -90,8 +90,8 @@ class Example {
 }
 
 const instance = new Example();
-console.log(instance.getPrivateField());
-console.log(instance.publicField);
+// console.log(instance.getPrivateField());
+// console.log(instance.publicField);
 // console.log(instance.#privateField);
 
 class Parent {
@@ -105,5 +105,93 @@ class Child extends Parent {
 }
 
 const childInstance = new Child();
-console.log(childInstance.showProtectedField());
-console.log(childInstance.protectedField);
+// console.log(childInstance.showProtectedField());
+// console.log(childInstance.protectedField);
+
+//private, protected, public
+
+//Private (Для безопасности)
+class Person {
+  constructor(name, age) {
+    this._name = name;
+    this.age = age;
+  }
+
+  getName() {
+    return this._name;
+  }
+}
+
+const Anton = new Person("Anton", 20);
+console.log(Anton.getName());
+
+//protected
+class Parent2 {
+  constructor() {
+    this._privateField = 42;
+    this._protectedField = 99;
+  }
+
+  getPrivateField() {
+    return this._privateField;
+  }
+
+  getProtectedField() {
+    return this._protectedField;
+  }
+
+  getTest() {
+    return 1;
+  }
+}
+
+class Child2 extends Parent2 {
+  constructor() {
+    super();
+  }
+
+  useField() {
+    console.log(this._protectedField);
+  }
+}
+
+const child2 = new Child2();
+const parent2 = new Parent2();
+
+//
+
+//Public
+const myObject = {
+  name: "Parwinder",
+  sayMyName: function () {
+    return this.name;
+  },
+};
+
+console.log(myObject);
+
+class MyClass {
+  name = "Parwinder";
+
+  sayMyName() {
+    return this.name;
+  }
+}
+
+const myClass = new MyClass();
+
+//Private
+class ObjectCreator {
+  #meaningOfLife = "Hello life"; // private
+  _name = "OBJECT_CREATOR"; // protected
+
+  constructor() {}
+
+  returnMeaningOfLife() {
+    return this.#meaningOfLife;
+  }
+}
+
+const objCrator = new ObjectCreator();
+console.log(objCrator.returnMeaningOfLife());
+console.log("Protected:", objCrator._name);
