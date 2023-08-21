@@ -195,3 +195,23 @@ class ObjectCreator {
 const objCrator = new ObjectCreator();
 console.log(objCrator.returnMeaningOfLife());
 console.log("Protected:", objCrator._name);
+
+//Private (#private), protected (_protected), public (public)
+// interface Animal {
+//   speak(): string;
+//   eat(food: string): string
+// }
+
+// class Dog implements Animal {
+//   speak(){
+//       return "Woof!";
+//   }
+
+//   eat(food: string){
+//       return "";
+//   }
+// }
+
+// const dog = new Dog();
+// console.log(dog.speak()); // Вывод: Woof!
+// console.log(dog.eat("bone")); // Вывод: Dog is eating bone
