@@ -215,3 +215,18 @@ console.log("Protected:", objCrator._name);
 // const dog = new Dog();
 // console.log(dog.speak()); // Вывод: Woof!
 // console.log(dog.eat("bone")); // Вывод: Dog is eating bone
+
+//Generics
+// Обобщенная функция, которая возвращает первый элемент массива
+// function getFirstElement<T>(arr: T[]): T | undefined {
+//   return arr[0];
+// }
+
+// const stringArray: string[] = ["apple", "banana", "cherry"];
+// const numberArray: number[] = [1, 2, 3];
+
+// const firstString = getFirstElement(stringArray); // Тип: string | undefined
+// const firstNumber = getFirstElement(numberArray); // Тип: number | undefined
+
+// console.log(firstString); // Вывод: apple
+// console.log(firstNumber); // Вывод: 1
