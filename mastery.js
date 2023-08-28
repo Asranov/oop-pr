@@ -89,4 +89,30 @@ const manager = new Manager("Manager", "Manager position", "Business Center");
 console.log(manager._position);
 console.log(manager.getDepartmentInfo());
 
+//Interface
+// interface Person {
+//   name: string
+//   age: number
+// }
+
+// const person: Person = {
+//   name: "Eshmat",
+//   age: 10
+// }
+
+// interface Shape {
+//   calculateArea(): number;
+// }
+
+// class Circle implements Shape {
+//   constructor(private radius: number){}
+
+//   calculateArea(){
+//       return Math.PI * this.radius * this.radius
+//   }
+// }
+
+// const circle = new Circle(5);
+// console.log(circle.calculateArea());
+
 //Generics
