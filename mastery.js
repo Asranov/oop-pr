@@ -116,3 +116,35 @@ console.log(manager.getDepartmentInfo());
 // console.log(circle.calculateArea());
 
 //Generics
+//Create a function that takes an argument of type T and returns it:
+// function identity<T>(arg: T): T {
+//     return arg;
+// }
+
+// const result = identity("hello");
+// console.log(result); // Output: hello
+
+//Create a generic class that wraps an array and has a method to add elements to it
+// class ArrayWrapper<T> {
+//     private items: T[] = []
+
+//     addItem(item: T){
+//         this.items.push(item)
+//     }
+
+//     getItems(): T[]{
+//         return this.items
+//     }
+// }
+
+// const stringArray = new ArrayWrapper();
+// stringArray.addItem("apple");
+// stringArray.addItem(12);
+// console.log(stringArray.getItems());
+
+// class Pair<T> {
+//     constructor(public first: T, public second: T){ }
+// }
+
+// const numbersPair = new Pair(1, 2);
+// console.log(numbersPair.first, numbersPair.second); // Output: 1 2
