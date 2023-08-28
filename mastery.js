@@ -88,3 +88,5 @@ class Manager extends Employee {
 const manager = new Manager("Manager", "Manager position", "Business Center");
 console.log(manager._position);
 console.log(manager.getDepartmentInfo());
+
+//Generics
