@@ -42,7 +42,7 @@ class Enemy {
   attack = () => console.log(`I'm attacking with a power of ${this.power}!`);
 }
 
-class Alien extends Enemy {
+class Alien2 extends Enemy {
   constructor(name, phrase, power) {
     super(power);
     this.name = name;
